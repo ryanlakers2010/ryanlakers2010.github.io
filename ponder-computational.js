@@ -1,24 +1,25 @@
+// Get the value from the drop-down so you know what theme they chose
+let chosenTheme = themeSelect.value;
 
-let selectElem = document.querySelector('#theme-select');
-let pageContent = document.querySelector('body');
-
-selectElem.addEventListener('change', changeTheme);
-
-function changeTheme() {
-    let current = selectElem.value;
-    if (current === 'ocean') {
-        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/ocean.jpg')";
-        pageContent.style.fontFamily = "Papyrus, fantasy";
-    } else if (current === 'forest') {
-        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/forest.jpg')";
-        pageContent.style.fontFamily = "Impact, sans-serif";
-    } else if (current === 'desert') {
-        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/desert.jpg')";
-        pageContent.style.fontFamily = "'Big Caslon', serif";
-    } else {
-        // default
-        document.body.style.backgroundImage = "none";
-        pageContent.style.fontFamily = "Georgia, serif";
-    }
+// According to what theme they choose, change the font style and background image:
+if (chosenTheme === "ocean") {
+  // If the value is ocean
+  document.body.style.fontFamily = "Papyrus, fantasy";
+  document.body.style.backgroundImage = "url('ocean.jpg')";
+} 
+else if (chosenTheme === "forest") {
+  // If the value is forest
+  document.body.style.fontFamily = "Impact, fantasy";
+  document.body.style.backgroundImage = "url('forest.jpg')";
+} 
+else if (chosenTheme === "desert") {
+  // If the value is desert
+  document.body.style.fontFamily = "'Big Caslon', serif";
+  document.body.style.backgroundImage = "url('dessert.jpg')";
+} 
+else {
+  // Otherwise no changes will be made to the background and font will remain the same
+  document.body.style.fontFamily = "";
+  document.body.style.backgroundImage = "";
 }
           
