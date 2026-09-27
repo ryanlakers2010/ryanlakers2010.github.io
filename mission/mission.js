@@ -1,20 +1,23 @@
-let selectElem = document.querySelector('select');
-let logo = document.querySelector('img');
+// Select DOM elements
+const selectElem = document.querySelector('select');
+const logo = document.querySelector('#logo');
 
-selectElem.addEventListener('change', changeTheme);
-
+// Event handler function
 function changeTheme() {
-    let current = selectElem.value;
-    
+    const current = selectElem.value;
+
     if (current === 'dark') {
-        // Add dark class to body for background/text color changes
+        // Add dark class to body
         document.body.classList.add('dark');
-        // Change the logo image source to the dark mode logo
-        logo.setAttribute('src', 'byui-logo_white.png'); 
+        // Change image src to white logo
+        logo.src = 'https://wddbyui.github.io/wdd131/images/byui-logo-white.png';
     } else {
-        // Remove dark class from body to revert to light mode
+        // Remove dark class from body
         document.body.classList.remove('dark');
-        // Change the logo image source back to the original logo
-        logo.setAttribute('src', 'byui-logo_blue.webp'); 
+        // Revert image src to blue logo
+        logo.src = 'byui-logo.png';
     }
-}              
+}
+
+// Add event listener
+selectElem.addEventListener('change', changeTheme);         
