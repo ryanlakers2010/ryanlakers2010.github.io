@@ -1,30 +1,24 @@
-const bodyElement = document.body;
-const themeSelect = document.getElementById("theme-select");
 
+let selectElem = document.querySelector('#theme-select');
+let pageContent = document.querySelector('body');
 
-themeSelect.addEventListener("change", changeTheme);
-
+selectElem.addEventListener('change', changeTheme);
 
 function changeTheme() {
-  
-  const selectedTheme = themeSelect.value;
-
-  
-  if (selectedTheme === "ocean") {
-    bodyElement.style.fontFamily = "Papyrus, fantasy";
-    bodyElement.style.backgroundImage = "url('ocean.jpg')";
-  } 
-  else if (selectedTheme === "forest") {
-    bodyElement.style.fontFamily = "Impact, charcoal, sans-serif";
-    bodyElement.style.backgroundImage = "url('forest.jpg')";
-  } 
-  else if (selectedTheme === "desert") {
-    bodyElement.style.fontFamily = "'Big Caslon', Book Antiqua, serif";
-    bodyElement.style.backgroundImage = "url('desert.jpg')";
-  } 
-  else {
-    // Default fallback if no theme or default option is selected
-    bodyElement.style.fontFamily = "Arial, sans-serif";
-    bodyElement.style.backgroundImage = "none";
-  }
+    let current = selectElem.value;
+    if (current === 'ocean') {
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/ocean.jpg')";
+        pageContent.style.fontFamily = "Papyrus, fantasy";
+    } else if (current === 'forest') {
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/forest.jpg')";
+        pageContent.style.fontFamily = "Impact, sans-serif";
+    } else if (current === 'desert') {
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/desert.jpg')";
+        pageContent.style.fontFamily = "'Big Caslon', serif";
+    } else {
+        // default
+        document.body.style.backgroundImage = "none";
+        pageContent.style.fontFamily = "Georgia, serif";
+    }
 }
+          
