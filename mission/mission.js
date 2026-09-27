@@ -13,4 +13,5 @@ themeSelect.addEventListener('change', (event) => {
     // logo.src = 'byui-logo-blue.webp';
   }
 });       
-                    
+   // Add event listener to the select element
+themeSelector.addEventListener('change', changeTheme);                 
