@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="An in-depth guide to HTML meta tags.">
-    <meta name="author" content="Ryan Matthews">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Tags and CSS Review</title>
-    <link href="meta-css.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="description" content="An in-depth guide to HTML meta tags.">
+    <meta name="author" content="Ryan Matthews">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Tags and CSS Review</title>
+    <link href="meta-css.css" rel="stylesheet">
+    <!-- Google Fonts import for extra custom font choices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        #font-selector-container {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-   
-    <div id="content">
-        <h1>HTML, CSS, and JS</h1>
-        <p>The foundational technologies that power websites and web applications</p>
-        <hr>
-        <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
-        <div id="topics">
-            <h2>HyperText Markup Language</h2>
-            <ul class="list">
-                <li>Defines the structure and content of a web page.</li>
-                <li>Without HTML there's nothing for the browser to display.</li>
-            </ul>
-            <h2>Cascading Style Sheets</h2>
-            <ul class="list">
-                <li>Controls how the HTML elements look.</li>
-                <li>Without CSS pages look plain and unstyled.</li>
-            </ul>
-            <h2>JavaScript</h2>
-            <ul class="list">
-                <li>Adds interactivity and dynamic behavior.</li>
-                <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
-            </ul>
-        </div>
+
+    <div id="content">
+        <h1>HTML, CSS, and JS</h1>
+        <p>The foundational technologies that power websites and web applications</p>
         
-<label for="webdevlist">Choose One:</label>
-<select name="code" id="webdevlist">
-    <option>Choose One:</option>
-    <option value="html">HTML</option>
-    <option value="css">CSS</option>
-    <option value="js">JavaScript</option>
-</select>                   
-            </div> 
-    
-let selectElem = document.getElementById('webdevlist');
-selectElem.addEventListener('change', function(){
-    let codeValue = selectElem.value;
-    console.log(codeValue);
-})
+        <!-- Font Selection Dropdown Control -->
+        <div id="font-selector-container">
+            <label for="font-select">Select Page Font:</label>
+            <select id="font-select">
+                <option value="Arial, sans-serif">Sans-Serif (Arial)</option>
+                <option value="'Playfair Display', serif">Serif (Playfair Display)</option>
+                <option value="'Courier Prime', monospace">Monospace (Courier Prime)</option>
+                <option value="'Montserrat', sans-serif">Modern (Montserrat)</option>
+            </select>
+        </div>
+
+        <hr>
+        <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
+        
+        <div id="topics">
+            <h2>HyperText Markup Language</h2>
+            <ul class="list">
+                <li>Defines the structure and content of a web page.</li>
+                <li>Without HTML there's nothing for the browser to display.</li>
+            </ul>
+            <h2>Cascading Style Sheets</h2>
+            <ul class="list">
+                <li>Controls how the HTML elements look.</li>
+                <li>Without CSS pages look plain and unstyled.</li>
+            </ul>
+            <h2>JavaScript</h2>
+            <ul class="list">
+                <li>Adds interactivity and dynamic behavior.</li>
+                <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+            </ul>
+        </div>
+    </div>            
+
+    <!-- JavaScript DOM Manipulation for Font Switching -->
+    <script>
+        // 1. Select the DOM elements
+        const fontSelect = document.getElementById('font-select');
+        const contentArea = document.getElementById('content');
+
+        // 2. Listen for changes on the font select element
+        fontSelect.addEventListener('change', function() {
+            // 3. Update the inline CSS font-family property dynamically
+            const selectedFont = fontSelect.value;
+            contentArea.style.fontFamily = selectedFont;
+        });
+    </script>
 </body>
-</html> 
+</html>
