@@ -1,0 +1,37 @@
+<!-- HTML Structure -->
+<label for="webdevlist">Choose One:</label>
+<select name="code" id="webdevlist">
+    <option value="">Choose One:</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="js">JavaScript</option>
+</select>
+
+<!-- Placeholder element to display our dynamic content -->
+<div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+
+<!-- JavaScript DOM Manipulation -->
+<script>
+    // 1. Select the DOM elements
+    let selectElem = document.getElementById('webdevlist');
+    let outputElem = document.getElementById('output');
+
+    // 2. Add an event listener to detect changes
+    selectElem.addEventListener('change', function() {
+        let codeValue = selectElem.value;
+
+        // 3. Manipulate the DOM based on the selected value
+        if (codeValue === 'html') {
+            outputElem.textContent = 'HTML structures the content of the web page.';
+            outputElem.style.color = '#e34c26'; // HTML Orange
+        } else if (codeValue === 'css') {
+            outputElem.textContent = 'CSS styles the appearance of the web page.';
+            outputElem.style.color = '#264de4'; // CSS Blue
+        } else if (codeValue === 'js') {
+            outputElem.textContent = 'JavaScript adds interactivity and logic.';
+            outputElem.style.color = '#f7df1e'; // JS Yellow
+        } else {
+            outputElem.textContent = ''; // Clear text if default option is selected
+        }
+    });
+</script>
