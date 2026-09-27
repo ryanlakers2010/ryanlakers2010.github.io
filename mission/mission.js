@@ -1,17 +1,20 @@
-const themeSelect = document.getElementById('theme-select');
-const logo = document.getElementById('logo');
+let selectElem = document.querySelector('select');
+let logo = document.querySelector('img');
 
-themeSelect.addEventListener('change', (event) => {
-  const selectedTheme = event.target.value;
+selectElem.addEventListener('change', changeTheme);
 
-  if (selectedTheme === 'dark') {
-    document.body.classList.add('dark');
-    // Optional: Switch to a white/light logo if available in dark mode
-    // logo.src = 'byui-logo-white.webp';
-  } else {
-    document.body.classList.remove('dark');
-    // logo.src = 'byui-logo-blue.webp';
-  }
-});       
-   // Add event listener to the select element
-themeSelector.addEventListener('change', changeTheme);                 
+function changeTheme() {
+    let current = selectElem.value;
+    
+    if (current === 'dark') {
+        // Add dark class to body for background/text color changes
+        document.body.classList.add('dark');
+        // Change the logo image source to the dark mode logo
+        logo.setAttribute('src', 'byui-logo_white.png'); 
+    } else {
+        // Remove dark class from body to revert to light mode
+        document.body.classList.remove('dark');
+        // Change the logo image source back to the original logo
+        logo.setAttribute('src', 'byui-logo_blue.webp'); 
+    }
+}              
