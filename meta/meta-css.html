@@ -7,31 +7,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Tags and CSS Review</title>
     <link href="meta-css.css" rel="stylesheet">
+    <style>
+        /* Optional inline styling for interactive feedback */
+        .highlight {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding-left: 10px;
+            transition: all 0.3s ease;
+        }
+        #interactive-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-   
+
     <div id="content">
         <h1>HTML, CSS, and JS</h1>
         <p>The foundational technologies that power websites and web applications</p>
         <hr>
         <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
-        <div id="topics">
-            <h2>HyperText Markup Language</h2>
-            <ul class="list">
-                <li>Defines the structure and content of a web page.</li>
-                <li>Without HTML there's nothing for the browser to display.</li>
-            </ul>
-            <h2>Cascading Style Sheets</h2>
-            <ul class="list">
-                <li>Controls how the HTML elements look.</li>
-                <li>Without CSS pages look plain and unstyled.</li>
-            </ul>
-            <h2>JavaScript</h2>
-            <ul class="list">
-                <li>Adds interactivity and dynamic behavior.</li>
-                <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
-            </ul>
+        
+        <!-- Interactive Select Dropdown Section -->
+        <div id="interactive-section">
+            <label for="webdevlist">Choose One:</label>
+            <select name="code" id="webdevlist">
+                <option value="">Choose One:</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+            </select>
+            
+            <!-- Output container where dynamic feedback displays -->
+            <p id="selection-output" style="margin-top: 10px; font-weight: bold;"></p>
         </div>
-    </div>            
+
+        <div id="topics">
+            <div id="sec-html">
+                <h2>HyperText Markup Language</h2>
+                <ul class="list">
+                    <li>Defines the structure and content of a web page.</li>
+                    <li>Without HTML there's nothing for the browser to display.</li>
+                </ul>
+            </div>
+
+            <div id="sec-css">
+                <h2>Cascading Style Sheets</h2>
+                <ul class="list">
+                    <li>Controls how the HTML elements look.</li>
+                    <li>Without CSS pages look plain and unstyled.</li>
+                </ul>
+            </div>
+
+            <div id="sec-js">
+                <h2>JavaScript</h2>
+                <ul class="list">
+                    <li>Adds interactivity and dynamic behavior.</li>
+                    <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+                </ul>
+            </div>
+        </div>
+    </div>        
+
+    <!-- JavaScript DOM Manipulation -->
+    <script>
+        // 1. Select target DOM elements
+        const selectElem = document.getElementById('webdevlist');
+        const outputElem = document.getElementById('selection-output');
+        
+        const htmlSec = document.getElementById('sec-html');
+        const cssSec = document.getElementById('sec-css');
+        const jsSec = document.getElementById('sec-js');
+
+        // Helper function to clear previous highlights
+        function clearHighlights() {
+            htmlSec.classList.remove('highlight');
+            cssSec.classList.remove('highlight');
+            jsSec.classList.remove('highlight');
+        }
+
+        // 2. Add event listener to react to dropdown changes
+        selectElem.addEventListener('change', function() {
+            const selectedValue = selectElem.value;
+            clearHighlights();
+
+            // 3. Manipulate DOM based on selection
+            if (selectedValue === 'html') {
+                outputElem.textContent = 'You selected HTML!';
+                htmlSec.classList.add('highlight');
+            } else if (selectedValue === 'css') {
+                outputElem.textContent = 'You selected CSS!';
+                cssSec.classList.add('highlight');
+            } else if (selectedValue === 'js') {
+                outputElem.textContent = 'You selected JavaScript!';
+                jsSec.classList.add('highlight');
+            } else {
+                outputElem.textContent = '';
+            }
+        });
+    </script>
 </body>
 </html>
