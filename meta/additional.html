@@ -1,37 +1,26 @@
-<!-- HTML Structure -->
-<label for="webdevlist">Choose One:</label>
-<select name="code" id="webdevlist">
-    <option value="">Choose One:</option>
-    <option value="html">HTML</option>
-    <option value="css">CSS</option>
-    <option value="js">JavaScript</option>
-</select>
 
-<!-- Placeholder element to display our dynamic content -->
-<div id="output" style="margin-top: 15px; font-weight: bold;"></div>
-
-<!-- JavaScript DOM Manipulation -->
-<script>
-    // 1. Select the DOM elements
-    let selectElem = document.getElementById('webdevlist');
-    let outputElem = document.getElementById('output');
-
-    // 2. Add an event listener to detect changes
-    selectElem.addEventListener('change', function() {
-        let codeValue = selectElem.value;
-
-        // 3. Manipulate the DOM based on the selected value
-        if (codeValue === 'html') {
-            outputElem.textContent = 'HTML structures the content of the web page.';
-            outputElem.style.color = '#e34c26'; // HTML Orange
-        } else if (codeValue === 'css') {
-            outputElem.textContent = 'CSS styles the appearance of the web page.';
-            outputElem.style.color = '#264de4'; // CSS Blue
-        } else if (codeValue === 'js') {
-            outputElem.textContent = 'JavaScript adds interactivity and logic.';
-            outputElem.style.color = '#f7df1e'; // JS Yellow
-        } else {
-            outputElem.textContent = ''; // Clear text if default option is selected
-        }
-    });
-</script>
+<div id="content">
+    <h1>HTML, CSS, and JS</h1>
+    
+    <p>The foundational technologies that power websites and web applications</p>
+    <hr>
+    <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
+    <div id="topics">
+        <h2>HyperText Markup Language</h2>
+        <ul class="list">
+            <li>Defines the structure and content of a web page.</li>
+            <li>Without HTML there's nothing for the browser to display.</li>
+        </ul>
+        <h2>Cascading Style Sheets</h2>
+        <ul class="list">
+            <li>Controls how the HTML elements look.</li>
+            <li>Without CSS pages look plain and unstyled.</li>
+        </ul>
+        <h2>JavaScript</h2>
+        <ul class="list">
+            <li>Adds interactivity and dynamic behavior.</li>
+            <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+        </ul>
+    </div>
+</div>
+                
