@@ -1,15 +1,16 @@
+const themeSelect = document.getElementById('theme-select');
+const logo = document.getElementById('logo');
 
-let selectElem = document.querySelector('select');
-let logo = document.querySelector('img');
+themeSelect.addEventListener('change', (event) => {
+  const selectedTheme = event.target.value;
 
-selectElem.addEventListener('change', changeTheme);
-
-function changeTheme() {
-    let current = selectElem.value;
-    if (current == 'dark') {
-        // code for changes to colors and logo
-    } else {
-        // code for changes to colors and logo
-    }
-}           
+  if (selectedTheme === 'dark') {
+    document.body.classList.add('dark');
+    // Optional: Switch to a white/light logo if available in dark mode
+    // logo.src = 'byui-logo-white.webp';
+  } else {
+    document.body.classList.remove('dark');
+    // logo.src = 'byui-logo-blue.webp';
+  }
+});       
                     
