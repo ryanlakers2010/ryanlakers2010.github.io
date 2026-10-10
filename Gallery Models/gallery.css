@@ -1,12 +1,17 @@
-
+```css
 h1 {
     text-align: center;
     margin: 35px 0;
 }
+
 .gallery {
     max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
+
 figure img {
     width: 250px;
     height: 250px;
@@ -16,51 +21,73 @@ figure img {
     box-shadow: 5px 5px 15px black;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
 }
-/* modal */
 
-dialog img {
-    width: 90%;
-    display: block;
-    margin: 20vh auto;
-}
+/* Modal */
+
 dialog {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.75);
+    max-width: none;
+    max-height: none;
+    border: none;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    position: fixed;
 }
+
+dialog[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog img {
+    max-width: 90%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 .close-viewer {
     position: absolute;
-    top: 10vh;
-    right: 2vh;
-    padding: 3px 6px;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
     font-size: 1.5em;
+    cursor: pointer;
 }
+
+/* Tablet */
 
 @media screen and (min-width: 700px) {
     .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Desktop */
+
 @media screen and (min-width: 1000px) {
     .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
+
     dialog img {
-        width: 60%;
-        margin: 15vh auto;
-    }
-    .close-viewer {
-        position: absolute;
-        right: 15vh;
-    }
-    .viewer {
-        margin: 50px;
-        padding: 50px;
-    }
-    .viewer img {
         max-width: 800px;
+        max-height: 85vh;
+    }
+
+    .close-viewer {
+        top: 30px;
+        right: 40px;
     }
 }
+```
           
