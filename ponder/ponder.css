@@ -1,0 +1,66 @@
+```css
+/* Menu button */
+#menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu-button span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Hide navigation */
+.hide {
+    display: none;
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+/* Hamburger animation */
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+/* Desktop navigation */
+@media screen and (min-width: 700px) {
+    #menu-button {
+        display: none;
+    }
+
+    nav.hide {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+```
