@@ -1,4 +1,3 @@
-```javascript
 // Select the menu button and navigation
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#navigation");
