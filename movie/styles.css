@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.main-nav li {
+    padding: 4px 8px;
+    display: inline-block; /* Aligns nav items horizontally */
+    margin: 0 10px;
+}
+
+.main-nav a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+#movie-list {
+    padding: 0 2rem;
+}
+
+.movie {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+.movie h2 {
+    color: #b30059;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.movie p {
+    padding-left: 20px;
+}
+
+.movie img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.desc {
+    /* Fixed from #desc since it's now a class */
+    font-style: italic;
+}
+
+/* Optional responsive enhancements */
+@media (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    
+    .main-nav {
+        margin: 0;
+    }
+}
