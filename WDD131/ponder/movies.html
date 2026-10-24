@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponder - Dynamic Content | Movie Reviews</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #1a2530;
+      color: #ffffff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4rem solid #34495e;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo-main {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    header .logo-sub {
+      font-size: 0.75rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: #00bcd4;
+    }
+
+    header .course-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Main Content Styling */
+    main {
+      flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    main h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Grid Layout for Movie Cards */
+    #movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Movie Card Styling */
+    .movie-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background-color: #eee;
+    }
+
+    .movie-details {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex-grow: 1;
+    }
+
+    .movie-details h2 {
+      font-size: 1.3rem;
+      color: #1a2530;
+      margin-bottom: 0.25rem;
+    }
+
+    .movie-meta {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .movie-meta strong {
+      color: #444;
+    }
+
+    .movie-stars {
+      margin-top: 0.25rem;
+      font-size: 1rem;
+    }
+
+    .movie-description {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #1a2530;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-main">WEB</span>
+      <div class="logo-sub">
+        <div>DYNAMIC</div>
+        <div>FUNDAMENTALS</div>
+      </div>
+    </div>
+    <div class="course-title">
+      WDD 131
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <h1>Ponder - Dynamic Content</h1>
+
+    <section id="movie-list" aria-label="Movie Reviews">
+      <!-- Dynamic movie content injected via JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Brigham Young University - Idaho</p>
+  </footer>
+
+  <script>
+    const movies = [
+      {
+        title: "Spider-Man: Into the Spider-Verse",
+        date: "Dec 14, 2018",
+        description: "Miles Morales becomes the Spider-Man of his reality and crosses paths with others from the multiverse.",
+        imgSrc: "https://wddbyui.github.io/wdd131/images/spiderman.png",
+        imgAlt: "Miles Morales swinging through the city",
+        ages: "10+",
+        genre: "Action/Adventure",
+        stars: "⭐⭐⭐⭐⭐"
+      },
+      {
+        title: "The Other Side of Heaven",
+        date: "December 14, 2001",
+        description: "Based on the true story of Elder John H. Groberg, a missionary in Tonga in the 1950s, this film tells a powerful story of faith, hardship, and miracles.",
+        imgSrc: "https://wddbyui.github.io/wdd131/images/heaven.png",
+        imgAlt: "Poster for The Other Side of Heaven showing a missionary and tropical landscape",
+        ages: "10+",
+        genre: "Drama/Religious",
+        stars: "⭐⭐⭐⭐"
+      },
+      {
+        title: "Luca",
+        date: "June 18, 2021",
+        description: "Two sea monsters experience a life-changing summer on the Italian Riviera.",
+        imgSrc: "https://wddbyui.github.io/wdd131/images/luca.png",
+        imgAlt: "Luca and Alberto standing on the beach",
+        ages: "6+",
+        genre: "Family/Fantasy",
+        stars: "⭐⭐⭐⭐"
+      },
+      {
+        title: "17 Miracles",
+        date: "June 3, 2011",
+        description: "A moving depiction of the Willie Handcart Company's journey west in 1856, focusing on the miraculous events that helped early pioneers survive one of the harshest migrations in history.",
+        imgSrc: "https://wddbyui.github.io/wdd131/images/miracles.jpg",
+        imgAlt: "Movie poster for 17 Miracles showing handcart pioneers walking through snow",
+        ages: "12+",
+        genre: "Historical/Religious",
+        stars: "⭐⭐⭐⭐"
+      }
+    ];
+
+    const movieListElement = document.querySelector("#movie-list");
+
+    function movieTemplate(movie) {
+      return `
+        <article class="movie-card">
+          <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
+          <div class="movie-details">
+            <h2>${movie.title}</h2>
+            <p class="movie-meta"><strong>Released:</strong> ${movie.date} | <strong>Rated:</strong> ${movie.ages}</p>
+            <p class="movie-meta"><strong>Genre:</strong> ${movie.genre}</p>
+            <div class="movie-stars" aria-label="Rating: ${movie.stars.length / 2} out of 5 stars">${movie.stars}</div>
+            <p class="movie-description">${movie.description}</p>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderMovies(movieList) {
+      movieListElement.innerHTML = "";
+      movieList.forEach(movie => {
+        const htmlString = movieTemplate(movie);
+        movieListElement.innerHTML += htmlString;
+      });
+    }
+
+    renderMovies(movies);
+  </script>
+</body>
+</html>
