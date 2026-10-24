@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131: Array Methods & Dynamic Rendering</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Array Methods & Dynamic Content</h1>
+    <p>Interactive demonstration of <code>map()</code>, <code>reduce()</code>, <code>filter()</code>, <code>indexOf()</code>, and Template Literals.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Activity 1: Grade to Points & GPA -->
+    <section class="card">
+      <div class="card-header">
+        <h2>1. Grade Converter & GPA Calculation</h2>
+        <span class="badge">map() &amp; reduce()</span>
+      </div>
+      <p>Converts letter grades into numeric points using <code>convert(grade)</code> and calculates average GPA with <code>reduce()</code>.</p>
+      
+      <div class="control-group">
+        <label for="gradeInput">Add Grade (A, B, C, D, F):</label>
+        <div class="input-row">
+          <input type="text" id="gradeInput" placeholder="e.g. A" maxlength="1" />
+          <button id="addGradeBtn">Add Grade</button>
+        </div>
+      </div>
+
+      <div class="results-box">
+        <p><strong>Grades Array:</strong> <span id="gradesDisplay">['A', 'B', 'A']</span></p>
+        <p><strong>Converted Points:</strong> <span id="pointsDisplay">[4, 3, 4]</span></p>
+        <p><strong>Calculated GPA:</strong> <span id="gpaDisplay" class="highlight">3.67</span></p>
+      </div>
+    </section>
+
+    <!-- Activity 2: Word Length Filter -->
+    <section class="card">
+      <div class="card-header">
+        <h2>2. Word Length Filter</h2>
+        <span class="badge">filter()</span>
+      </div>
+      <p>Filters out words from an array that are longer than a specified character length.</p>
+
+      <div class="control-group">
+        <label for="maxLengthInput">Maximum Word Length:</label>
+        <div class="input-row">
+          <input type="number" id="maxLengthInput" value="6" min="1" max="15" />
+          <button id="filterWordsBtn">Filter Words</button>
+        </div>
+      </div>
+
+      <div class="results-box">
+        <p><strong>Original Array:</strong> <code>['watermelon', 'peach', 'apple', 'tomato', 'grape']</code></p>
+        <p><strong>Filtered Output:</strong> <span id="wordsDisplay" class="highlight">['peach', 'apple', 'grape']</span></p>
+      </div>
+    </section>
+
+    <!-- Activity 3: Index Search -->
+    <section class="card">
+      <div class="card-header">
+        <h2>3. Array Index Lookup</h2>
+        <span class="badge">indexOf()</span>
+      </div>
+      <p>Finds the index of a target value within a numeric array.</p>
+
+      <div class="control-group">
+        <label for="searchNumberInput">Number to Find:</label>
+        <div class="input-row">
+          <input type="number" id="searchNumberInput" value="21" />
+          <button id="searchBtn">Find Index</button>
+        </div>
+      </div>
+
+      <div class="results-box">
+        <p><strong>Numbers Array:</strong> <code>[12, 34, 21, 54]</code></p>
+        <p><strong>Search Result:</strong> <span id="indexDisplay" class="highlight">Index 2</span></p>
+      </div>
+    </section>
+
+    <!-- Activity 4: Template Literals & DOM Rendering -->
+    <section class="card">
+      <div class="card-header">
+        <h2>4. Student Roster Generator</h2>
+        <span class="badge">map() &amp; DOM</span>
+      </div>
+      <p>Transforms student objects into HTML list elements using template literals and inserts them into the DOM.</p>
+
+      <div class="control-group">
+        <div class="input-row">
+          <input type="text" id="firstNameInput" placeholder="First Name" />
+          <input type="text" id="lastNameInput" placeholder="Last Name" />
+          <button id="addStudentBtn">Add Student</button>
+        </div>
+      </div>
+
+      <h3>Student Roster</h3>
+      <ul id="studentList" class="student-list">
+        <!-- Rendered dynamically -->
+      </ul>
+    </section>
+
+    <!-- Console Output Window -->
+    <section class="card full-width">
+      <div class="card-header">
+        <h2>Console Output Log</h2>
+        <button id="clearConsoleBtn" class="secondary-btn">Clear Log</button>
+      </div>
+      <pre id="consoleLog" class="console-box"></pre>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Brigham Young University - Idaho &copy; 2026 | WDD 131</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
