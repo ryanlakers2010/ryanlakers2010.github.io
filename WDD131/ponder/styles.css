@@ -1,0 +1,79 @@
+
+
+:root {
+  --primary-color: #1a2530;
+  --secondary-color: #34495e;
+  --accent-color: #00bcd4;
+  --bg-color: #f4f4f9;
+  --card-bg: #ffffff;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo-main {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+header .logo-sub {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+header .course-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
