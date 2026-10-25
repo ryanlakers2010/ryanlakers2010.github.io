@@ -1,4 +1,4 @@
-// Array of Article Data provided in WDD 131 instructions
+// Array of Article Data - with a 4th book added dynamically
 const articles = [
     {
         id: 1,
@@ -35,6 +35,19 @@ const articles = [
             "https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
         imgAlt: "Book cover for Pawn of Prophecy",
         ages: "12-16",
+        genre: "Fantasy",
+        stars: "⭐⭐⭐⭐⭐"
+    },
+    {
+        id: 4,
+        title: "Harry Potter and the Sorcerer's Stone",
+        date: "June 26, 1997",
+        description:
+            "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his aunt and uncle.",
+        imgSrc:
+            "https://images-na.ssl-images-amazon.com/images/I/81YOuOGTACL.jpg",
+        imgAlt: "Book cover for Harry Potter 1",
+        ages: "9-13",
         genre: "Fantasy",
         stars: "⭐⭐⭐⭐⭐"
     }
