@@ -3,44 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    
-    <!-- Link to your CSS file -->
+    <title>WDD 131 - Dynamic Blog</title>
     <link rel="stylesheet" href="blog.css">
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>My Blog</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Kids Book Reviews</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="container">
-        <article class="blog-post">
-            <h2>Welcome to My Blog</h2>
-            <p class="post-meta">Published on <time>October 24, 2026</time></p>
-            <p>This is your first blog post. You can style this text using <code>blog.css</code> and add interactive elements using <code>blog.js</code>!</p>
-        </article>
+    <main class="articles-page">
+        <!-- The left side column for filters/sidebar if your assignment requires it -->
+        <section class="filter-section">
+            <h2>Filters</h2>
+            <!-- Filter options go here -->
+        </section>
+
+        <!-- The main container where blog.js will dynamically insert the 3 books -->
+        <section class="articles-container" id="articlesContainer">
+            <!-- JavaScript will populate the books here -->
+        </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 My Blog. All rights reserved.</p>
-        </div>
+        <p>&copy; <span id="currentyear"></span> | WDD 131</p>
+        <p id="lastModified"></p>
     </footer>
 
-    <!-- Link to your JavaScript file -->
-    <script src="blog.js"></script>
+    <!-- JavaScript must be linked at the bottom -->
+    <script src="blog.js" defer></script>
 </body>
 </html>
