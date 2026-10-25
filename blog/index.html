@@ -3,53 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Book Club - Build a Blog Part 2</title>
+    <title>My Blog</title>
+    
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="blog.css">
-    <!-- defer ensures the script runs after the HTML is fully loaded -->
-    <script src="blog.js" defer></script>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>Kids Book Club Reviews</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Archive</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>My Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="page-content">
-        <!-- Sidebar Filters -->
-        <aside class="filters">
-            <h3>Filter Articles</h3>
-            <label for="age-select">Age Range:</label>
-            <select id="age-select">
-                <option value="all">All Ages</option>
-                <option value="10-14">10-14</option>
-                <option value="12-16">12-16</option>
-            </select>
+    <!-- Main Content Area -->
+    <main class="container">
+        <article class="blog-post">
+            <h2>Welcome to My Blog</h2>
+            <p class="post-meta">Published on <time>October 24, 2026</time></p>
+            <p>This is your first blog post. You can style this text using <code>blog.css</code> and add interactive elements using <code>blog.js</code>!</p>
+        </article>
+    </main>
 
-            <label for="genre-select">Genre:</label>
-            <select id="genre-select">
-                <option value="all">All Genres</option>
-                <option value="Fantasy">Fantasy</option>
-            </select>
-        </aside>
-
-        <!-- Main Content Container where JS inserts articles -->
-        <main>
-            <div id="articlesContainer" class="articles-container">
-                <!-- Articles dynamically inserted by blog.js -->
-            </div>
-        </main>
-    </div>
-
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; BYU-Idaho | WDD 131 Dynamic Web Fundamentals</p>
+        <div class="container">
+            <p>&copy; 2026 My Blog. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Link to your JavaScript file -->
+    <script src="blog.js"></script>
 </body>
 </html>
