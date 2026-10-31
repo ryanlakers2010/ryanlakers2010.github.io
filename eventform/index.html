@@ -1,73 +1,156 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="Register for an upcoming event using our online event registration form.">
+
   <title>Event Ticket Registration</title>
 
-  <link rel="stylesheet" href="form.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="form.css">
 
   <script src="form.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Event Ticket Registration</h1>
-    <p>Register today for our upcoming event!</p>
+  <header class="site-header">
+    <div class="header-content">
+      <h1>Event Ticket Registration</h1>
+      <p>Reserve your spot at our upcoming event!</p>
+    </div>
   </header>
 
   <main class="container">
 
-    <form id="eventForm" novalidate>
+    <section class="intro">
+      <h2>Welcome!</h2>
 
-      <h2>Register for an Event</h2>
+      <p>
+        We are excited that you are interested in attending.
+        Please complete the registration form below to reserve
+        your event ticket.
+      </p>
 
-      <div class="field">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
+      <p class="required-note">
+        Fields marked with an asterisk (*) are required.
+      </p>
+    </section>
 
-      <div class="field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+    <section class="registration-section">
 
-      <div class="field">
-        <label for="date">Event Date</label>
-        <input type="date" id="date" name="date" required>
-      </div>
+      <form id="eventForm" novalidate>
 
-      <div class="field">
-        <label for="type">Registration Type</label>
-        <select id="type" name="type" required>
-          <option value="">Choose an option</option>
-          <option value="student">Student</option>
-          <option value="guest">Guest</option>
-        </select>
-      </div>
+        <fieldset>
+          <legend>Personal Information</legend>
 
-      <div class="field" id="additionalInfo" hidden>
-        <label for="identifier" id="identifierLabel">
-          Student I#
-        </label>
+          <div class="field">
+            <label for="name">Full Name *</label>
 
-        <input type="text" id="identifier" name="identifier">
-      </div>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              autocomplete="name"
+              required
+            >
+          </div>
 
-      <button type="submit">Register</button>
+          <div class="field">
+            <label for="email">Email Address *</label>
 
-    </form>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              autocomplete="email"
+              required
+            >
+          </div>
 
-    <section id="message" aria-live="polite"></section>
+        </fieldset>
+
+        <fieldset>
+          <legend>Event Information</legend>
+
+          <div class="field">
+            <label for="date">Select Your Event Date *</label>
+
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="type">Registration Type *</label>
+
+            <select id="type" name="type" required>
+              <option value="">-- Select Registration Type --</option>
+              <option value="student">Student</option>
+              <option value="guest">Guest</option>
+            </select>
+          </div>
+
+        </fieldset>
+
+        <fieldset id="additionalInfo" hidden>
+          <legend>Additional Registration Information</legend>
+
+          <div class="field">
+            <label for="identifier" id="identifierLabel">
+              Student I# or Guest Access Code
+            </label>
+
+            <input
+              type="text"
+              id="identifier"
+              name="identifier"
+              placeholder="Enter your information"
+            >
+          </div>
+
+          <p class="help-text">
+            Students must enter their 9-digit I-number.
+            Guests must enter the event access code.
+          </p>
+
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" id="submitButton">
+            Register for Event
+          </button>
+        </div>
+
+      </form>
+
+    </section>
+
+    <section
+      id="message"
+      class="message"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+    </section>
 
   </main>
 
-  <footer>
-    <p>WDD 131 - Event Registration</p>
+  <footer class="site-footer">
+    <p>WDD 131 | Event Ticket Registration</p>
+    <p>Thank you for your interest in our event!</p>
   </footer>
 
 </body>
+
 </html>
+
