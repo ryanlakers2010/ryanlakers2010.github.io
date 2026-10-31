@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FSY Counselor Campus Preference Form">
+  <title>FSY Counselor Preference Form</title>
+
+  <link rel="stylesheet" href="form.css">
+  <script src="form.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>FSY Counselor Preferences</h1>
+    <p>Help us find the best location for you to serve!</p>
+  </header>
+
+  <main class="wrapper">
+
+    <div class="intro">
+      <h2>Welcome!</h2>
+      <p>
+        Please complete this form to share your availability
+        and preferred FSY campuses.
+      </p>
+      <p class="required-note">* Required fields</p>
+    </div>
+
+    <form id="fsyForm">
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="firstName">First Name *</label>
+          <input id="firstName" name="firstName"
+                 type="text" autocomplete="given-name" required>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name *</label>
+          <input id="lastName" name="lastName"
+                 type="text" autocomplete="family-name" required>
+        </div>
+
+        <div class="field full">
+          <label for="email">Email Address *</label>
+          <input id="email" name="email"
+                 type="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="travelRange">Travel Availability *</label>
+          <select id="travelRange" name="travelRange" required>
+            <option value="">Choose one</option>
+            <option value="one">One campus</option>
+            <option value="many">Two or more campuses</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="availableDate">Available Start Date *</label>
+          <input id="availableDate" name="availableDate"
+                 type="date" required>
+        </div>
+
+      </div>
+
+      <fieldset class="campus-group">
+        <legend>Preferred FSY Campuses *</legend>
+        <p class="help-text">
+          Select the campus or campuses where you are willing to serve.
+        </p>
+
+        <div class="campus-grid">
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="BYU - Provo, Utah">
+            <span>BYU - Provo, Utah</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="BYU-Idaho - Rexburg, Idaho">
+            <span>BYU-Idaho - Rexburg, Idaho</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="Southern Virginia University - Buena Vista, Virginia">
+            <span>Southern Virginia University - Buena Vista, Virginia</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="University of Maryland - College Park, Maryland">
+            <span>University of Maryland - College Park, Maryland</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="University of North Georgia - Dahlonega, Georgia">
+            <span>University of North Georgia - Dahlonega, Georgia</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="San Diego State University - San Diego, California">
+            <span>San Diego State University - San Diego, California</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="University of Idaho - Moscow, Idaho">
+            <span>University of Idaho - Moscow, Idaho</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="Utah State University - Logan, Utah">
+            <span>Utah State University - Logan, Utah</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="Pacific Lutheran University - Tacoma, Washington">
+            <span>Pacific Lutheran University - Tacoma, Washington</span>
+          </label>
+
+          <label class="campus-card">
+            <input type="checkbox" name="campus"
+                   value="Stetson University - DeLand, Florida">
+            <span>Stetson University - DeLand, Florida</span>
+          </label>
+
+        </div>
+      </fieldset>
+
+      <div id="notesContainer" class="field full" hidden>
+        <label for="notes">Additional Travel Information</label>
+        <textarea id="notes" name="notes"
+                  placeholder="Tell us about your travel preferences..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">
+        Submit Preferences
+      </button>
+
+    </form>
+
+    <section id="output" aria-live="polite"></section>
+
+  </main>
+
+  <footer>
+    <p>FSY Counselor Preference Form</p>
+  </footer>
+
+</body>
+</html>
+```
