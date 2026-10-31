@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Event Ticket Registration</title>
+
+  <link rel="stylesheet" href="form.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <script src="form.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Event Ticket Registration</h1>
+    <p>Register today for our upcoming event!</p>
+  </header>
+
+  <main class="container">
+
+    <form id="eventForm" novalidate>
+
+      <h2>Register for an Event</h2>
+
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="date">Event Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="field">
+        <label for="type">Registration Type</label>
+        <select id="type" name="type" required>
+          <option value="">Choose an option</option>
+          <option value="student">Student</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <div class="field" id="additionalInfo" hidden>
+        <label for="identifier" id="identifierLabel">
+          Student I#
+        </label>
+
+        <input type="text" id="identifier" name="identifier">
+      </div>
+
+      <button type="submit">Register</button>
+
+    </form>
+
+    <section id="message" aria-live="polite"></section>
+
+  </main>
+
+  <footer>
+    <p>WDD 131 - Event Registration</p>
+  </footer>
+
+</body>
+</html>
