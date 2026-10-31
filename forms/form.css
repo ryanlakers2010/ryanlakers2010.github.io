@@ -1,0 +1,188 @@
+
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fa;
+  color: #263445;
+  line-height: 1.6;
+}
+
+.site-header {
+  background: #173b63;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.site-header p {
+  margin-bottom: 0;
+}
+
+.wrapper {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.intro {
+  margin-bottom: 30px;
+}
+
+.intro h2 {
+  color: #173b63;
+}
+
+.required-note,
+.help-text {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+label,
+legend {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3978b9;
+  border-color: #3978b9;
+}
+
+.campus-group {
+  border: none;
+  padding: 20px 0;
+  margin: 15px 0;
+}
+
+.campus-group legend {
+  color: #173b63;
+  font-size: 1.2rem;
+}
+
+.campus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.campus-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #dbe3ed;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: normal;
+}
+
+.campus-card:hover {
+  background: #f0f6fc;
+  border-color: #3978b9;
+}
+
+.campus-card input {
+  width: auto;
+  accent-color: #173b63;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+  background: #173b63;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-button:hover {
+  background: #285b8e;
+}
+
+#output {
+  margin-top: 25px;
+}
+
+#output:not(:empty) {
+  padding: 20px;
+  background: #edf6ff;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .form-grid,
+  .campus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header h1 {
+    font-size: 1.5rem;
+  }
+}
+```
