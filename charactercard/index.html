@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Character Card</title>
+    <meta name="description" content="A JavaScript Character Card project for WDD131">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="Interactive RPG Character Card">
+    <meta property="og:url" content="https://yourusername.github.io/wdd131/charactercard">
+    <meta property="og:image" content="images/hero.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="Interactive RPG Character Card">
+    <meta name="twitter:image" content="images/hero.jpg">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="card">
+        <img id="characterImage" class="image" src="" alt="Character">
+
+        <h1 id="characterName" class="name"></h1>
+
+        <div class="stats">
+            <p><strong>Class:</strong> <span id="characterClass"></span></p>
+            <p><strong>Level:</strong> <span id="characterLevel"></span></p>
+            <p><strong>Health:</strong> <span id="characterHealth"></span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="attackBtn">Attack Character</button>
+            <button id="levelBtn">Level Up</button>
+        </div>
+
+        <p id="message" class="message"></p>
+    </div>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
