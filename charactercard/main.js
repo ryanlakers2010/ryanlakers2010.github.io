@@ -1,10 +1,9 @@
 const character = {
-    name: "Aragorn",
-    class: "Ranger",
-    level: 1,
-    health: 100,
-    image:
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600",
+    name: "Dragonis",
+    class: "Ancient Dragon King",
+    level: 25,
+    health: 200,
+    image: "images/dragonis.jpg",
 
     attacked() {
         this.health -= 20;
@@ -12,7 +11,10 @@ const character = {
         if (this.health <= 0) {
             this.health = 0;
             document.querySelector("#message").textContent =
-                `${this.name} has died!`;
+                "💀 Dragonis has fallen in battle!";
+        } else {
+            document.querySelector("#message").textContent =
+                `🔥 Dragonis takes 20 damage! Health is now ${this.health}.`;
         }
 
         updateCard();
@@ -20,36 +22,11 @@ const character = {
 
     levelUp() {
         this.level++;
+        this.health += 10;
+
         document.querySelector("#message").textContent =
-            `${this.name} reached level ${this.level}!`;
+            `⭐ Dragonis reached Level ${this.level}! +10 Health`;
 
         updateCard();
     }
 };
-
-function updateCard() {
-    document.querySelector("#characterName").textContent =
-        character.name;
-
-    document.querySelector("#characterClass").textContent =
-        character.class;
-
-    document.querySelector("#characterLevel").textContent =
-        character.level;
-
-    document.querySelector("#characterHealth").textContent =
-        character.health;
-
-    document.querySelector("#characterImage").src =
-        character.image;
-}
-
-updateCard();
-
-document.querySelector("#attackBtn").addEventListener("click", () => {
-    character.attacked();
-});
-
-document.querySelector("#levelBtn").addEventListener("click", () => {
-    character.levelUp();
-});
