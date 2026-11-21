@@ -123,4 +123,5 @@ function init() {
 
 // Run when the page loads
 init();
-
+document.querySelector("#random-button")
+  .addEventListener("click", init);
