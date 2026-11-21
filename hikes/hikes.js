@@ -105,3 +105,22 @@ function init() {
 }
 
 init();
+
+// Display one random hike when the page loads
+function init() {
+  // Generate a random number based on the number of hikes
+  const randomIndex = Math.floor(Math.random() * hikes.length);
+
+  // Get the randomly selected hike
+  const randomHike = hikes[randomIndex];
+
+  // Clear the container
+  hikeContainer.innerHTML = "";
+
+  // Display the random hike
+  renderHike(randomHike);
+}
+
+// Run when the page loads
+init();
+
