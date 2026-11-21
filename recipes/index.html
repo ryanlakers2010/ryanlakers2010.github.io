@@ -1,4 +1,73 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Browse delicious recipes, discover new meals, and find your next favorite dish.">
+    <meta name="author" content="Your Name">
+
+    <title>Recipe Book | Delicious Recipes</title>
+
+    <link rel="icon" href="images/recipe-book.png" type="image/png">
+    <link rel="stylesheet" href="recipes.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script src="recipes.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <img src="images/recipe-book.png" alt="Recipe Book logo">
+            <h1>Recipe Book</h1>
+        </div>
+
+        <form id="search" role="search">
+            <label for="search-input" class="visually-hidden">
+                Search recipes
+            </label>
+
+            <input
+                type="search"
+                id="search-input"
+                name="search"
+                placeholder="Search recipes..."
+            >
+
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>Welcome to the Recipe Book!</h2>
+
+            <p>
+                Looking for something delicious to make?
+                Explore our collection of recipes, find new favorites,
+                and discover meals for every occasion.
+            </p>
+        </section>
+
+        <section class="recipe-section" aria-labelledby="recipe-heading">
+
+            <h2 id="recipe-heading">Explore Our Recipes</h2>
+
+            <p class="recipe-intro">
+                From sweet desserts to delicious dinners,
+                there is something here for everyone.
+            </p>
+
+            <div id="recipe-container" class="recipe-container">
+              ```html
 <div id="recipe-container" class="recipe-container">
 
     <!-- Black Beans and Rice -->
@@ -124,4 +193,82 @@
     </article>
 
 </div>
+                <!-- Sweet Potato Waffles -->
+                <article class="recipe-card">
+                    <img
+                        src="images/sweet-potato-waffle-md(1).jpg"
+                        alt="Golden homemade sweet potato waffles served with fresh salad"
+                    >
+
+                    <div class="recipe-details">
+                        <h3>Sweet Potato Waffles</h3>
+
+                        <p>
+                            Delicious golden-brown sweet potato waffles
+                            with a crispy outside and soft inside.
+                            A great option for breakfast or brunch!
+                        </p>
+
+                        <p><strong>Category:</strong> Breakfast</p>
+
+                        <button type="button">View Recipe</button>
+                    </div>
+                </article>
+
+                <!-- Roasted Potatoes -->
+                <article class="recipe-card">
+                    <img
+                        src="images/roasted-potatoes(1).jpg"
+                        alt="Golden roasted potato slices seasoned and baked until crispy"
+                    >
+
+                    <div class="recipe-details">
+                        <h3>Roasted Potatoes</h3>
+
+                        <p>
+                            Crispy, golden potato slices seasoned
+                            and roasted to perfection. An easy and
+                            delicious side dish for any meal!
+                        </p>
+
+                        <p><strong>Category:</strong> Side Dish</p>
+
+                        <button type="button">View Recipe</button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+            <h2>Recipe Book</h2>
+
+            <p>
+                Bringing great recipes and delicious ideas
+                to your kitchen.
+            </p>
+
+            <nav class="social-links" aria-label="Social media">
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.pinterest.com/">Pinterest</a>
+            </nav>
+
+            <p>
+                &copy; <span id="current-year"></span> Recipe Book
+            </p>
+
+            <p>WDD 131 Dynamic Web Fundamentals</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```
 
