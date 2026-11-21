@@ -4,111 +4,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore hiking trails, discover new adventures, and find your next favorite hike.">
+  <title>Hiking Adventures</title>
 
-  <meta name="description" content="Explore hiking trails, discover new adventures, and find the perfect hike for your next outdoor trip.">
-
-  <title>Trail Finder | Discover Your Next Adventure</title>
- <button type="button" id="random-button">Show Random Hike</button>
   <link rel="stylesheet" href="hikes.css">
-  <script src="hikes.js" defer></script>
+  <script defer src="hikes.js"></script>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="header-content">
-      <a href="index.html" class="logo">
-        <span aria-hidden="true">🥾</span> Trail Finder
-      </a>
-
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#search-section">Find a Hike</a></li>
-          <li><a href="#hikes">Explore Trails</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>Hiking Adventures</h1>
+    <p>Discover beautiful trails and explore the outdoors!</p>
   </header>
 
   <main>
+    <section class="search-section">
+      <h2>Find Your Next Adventure</h2>
 
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>Find Your Next Adventure</h1>
+      <label for="search">Search for a hike:</label>
+      <input
+        id="search"
+        type="search"
+        placeholder="Search hikes or tags..."
+      >
 
-        <p>
-          Discover beautiful hiking trails, explore the outdoors,
-          and find the perfect adventure for your next trip.
-        </p>
-
-        <a href="#search-section" class="hero-button">
-          Explore Hikes
-        </a>
-      </div>
+      <button id="searchButton" type="button">Search</button>
+      <button id="randomHike" type="button">Random Hike</button>
     </section>
 
-    <section class="search-section" id="search-section">
+    <section class="hikes-section">
+      <h2>Featured Hiking Trails</h2>
 
-      <h2>Find Your Perfect Hike</h2>
+      <div id="hike-container">
 
-      <p>
-        Search by trail name, location, description, or hiking tags.
-      </p>
-
-      <div class="search-container">
-        <label for="search">Search hiking trails</label>
-
-        <div class="search-controls">
-          <input
-            type="search"
-            id="search"
-            name="search"
-            placeholder="Example: Yellowstone, waterfall..."
+        <article class="hike-card">
+          <img
+            src="https://wdd131.netlify.app/examples/hikes/images/teton-canyon.jpg"
+            alt="Scenic view of Teton Canyon"
           >
 
-          <button type="button" id="search-button">
-            Search
-          </button>
-        </div>
-      </div>
+          <div class="hike-content">
+            <h3>Teton Canyon</h3>
 
+            <div class="hike-tags">
+              <button type="button">Canyon</button>
+              <button type="button">Tetons</button>
+            </div>
+
+            <p>Beautiful short (or long) hike through Teton Canyon.</p>
+
+            <p><strong>Distance:</strong> 3 miles</p>
+
+            <p>
+              <strong>Difficulty:</strong>
+              <span class="rating" role="img" aria-label="1 out of 5">
+                🥾 Easy
+              </span>
+            </p>
+          </div>
+        </article>
+
+      </div>
     </section>
-
-    <section class="hikes-section" id="hikes">
-
-      <div class="section-heading">
-        <h2>Explore Hiking Trails</h2>
-
-        <p>
-          Check out these trails and find your next outdoor adventure.
-        </p>
-      </div>
-
-      <div id="hike-container" aria-live="polite" aria-atomic="false">
-
-        <!-- JavaScript will display hiking cards here -->
-
-      </div>
-
-    </section>
-
   </main>
 
-  <footer class="site-footer">
-
-    <h2>Trail Finder</h2>
-
-    <p>
-      Get outside, explore nature, and discover something new.
-    </p>
-
-    <p class="copyright">
-      &copy; 2026 Trail Finder | WDD 131
-    </p>
-
+  <footer>
+    <p>&copy; 2026 Hiking Adventures | Explore the Outdoors</p>
   </footer>
 
 </body>
 </html>
+
 
